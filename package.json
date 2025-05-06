@@ -1,0 +1,33 @@
+{
+  "name": "advertising-sdk",
+  "version": "3.2.0",
+  "description": "This is the Advertising sdk for Nordic Game LLC websites",
+  "main": "dist/ads.min.js",
+  "scripts": {
+    "test": "npx playwright test tests/sdk.test.js",
+    "build": "npx tsc && mkdir dist && npx uglifyjs ts/index.js --module --compress --mangle -o dist/feedback.min.js --source-map \"url='https://static.nordicgamelab.org/sdks/feedback/feedback.min.js.map'\"",
+    "lint": "npx eslint src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nordic-game-lab/feedback-sdk.git"
+  },
+  "author": "Nordic Game Lab LLC",
+  "license": "MPL-2.0",
+  "type": "module",
+  "bugs": {
+    "url": "https://nordicgamelab.atlassian.net/servicedesk/customer/portal/5"
+  },
+  "homepage": "https://github.com/nordic-game-lab/feedback-sdk#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "express": "^4.19.2",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.0.1",
+    "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "typescript": "^5.5.4"
+  }
+}
