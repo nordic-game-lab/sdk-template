@@ -1,0 +1,18 @@
+name: lint code
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@cbb722410c2e876e24abbe8de2cc27693e501dcb
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - name: install
+      run: npm i
+    - name: lint
+      run: npm run lint
