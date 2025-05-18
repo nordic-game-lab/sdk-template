@@ -5,7 +5,7 @@
   "main": "dist/ads.min.js",
   "scripts": {
     "test": "npx playwright test tests/sdk.test.js",
-    "build": "npx tsc && mkdir dist && npx uglifyjs ts/index.js --module --compress --mangle -o dist/feedback.min.js --source-map \"url='https://static.nordicgamelab.org/sdks/feedback/feedback.min.js.map'\"",
+    "build": "npx ngl-build build web",
     "lint": "npx eslint src/index.ts"
   },
   "repository": {
